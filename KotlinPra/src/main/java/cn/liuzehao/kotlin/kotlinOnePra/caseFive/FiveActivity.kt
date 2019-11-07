@@ -26,6 +26,11 @@ fun data(){
     var people1 = People("liuzehao", 34)
     var people2 = People("liuzehao", 34)
     Log.e(TAG, "data class People ===> " + (people1 == people2))
+
+    //复制对象
+    val people3 = people1.copy("liuxiaosheng", 26)
+    val (name, age) = people1
+    Log.e(TAG, "data class 解构 ==>" + "$name, $age years of age")
 }
 
 class User(name: String, age: Int){
